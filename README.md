@@ -17,11 +17,11 @@ Made for my **guitar practice** — since there aren't many good metronomes avai
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/react-metronome.git
-cd react-metronome
+git clone https://github.com/Ritikchauhan1704/WebMetronome.git
+cd WebMetronome
 
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun dev
