@@ -1,4 +1,4 @@
-# 🎵 React Metronome App
+# 🎵 Metronome App
 
 A simple and responsive metronome built using **React**.  
 Made for my **guitar practice** — since there aren't many good metronomes available for PC.
@@ -9,8 +9,7 @@ Made for my **guitar practice** — since there aren't many good metronomes avai
 - [React](https://reactjs.org/)
 - TypeScript
 - HTML5 Audio API
-- Tailwind CSS (optional but used for styling)
-
+- Tailwind CSS
 ---
 
 ## 📦 Installation
