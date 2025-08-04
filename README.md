@@ -1,8 +1,10 @@
 # 🎵 Metronome App
 
-A simple and responsive metronome built using **React**.  
-Made for my **guitar practice** — since there aren't many good metronomes available for PC.
+![Metronome Demo](img/image.png)
 
+A modern, responsive metronome built with **React** and **TypeScript**. Designed for musicians and guitarists who need a reliable, customizable metronome on their PC. Featuring a clean UI, accurate timing, and sound feedback using the HTML5 Audio API.
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -10,6 +12,13 @@ Made for my **guitar practice** — since there aren't many good metronomes avai
 - TypeScript
 - HTML5 Audio API
 - Tailwind CSS
+
+---
+
+## 📸 Screenshot
+
+![App Screenshot](img/image.png)
+
 ---
 
 ## 📦 Installation
@@ -24,3 +33,13 @@ bun install
 
 # Start development server
 bun dev
+```
+
+---
+
+## 🚀 Usage
+
+- Adjust the BPM (beats per minute) using the slider or input box.
+- Click the play/pause button to start or stop the metronome.
+- Use the tap tempo feature to set BPM by tapping.
+- Change time signature if available.
