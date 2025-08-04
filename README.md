@@ -15,12 +15,6 @@ A modern, responsive metronome built with **React** and **TypeScript**. Designed
 
 ---
 
-## 📸 Screenshot
-
-![App Screenshot](img/image.png)
-
----
-
 ## 📦 Installation
 
 ```bash
