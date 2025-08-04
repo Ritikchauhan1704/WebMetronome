@@ -6,9 +6,13 @@ export default function Metronome() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timeoutRef = useRef<number | null>(null);
   const bpmRef = useRef<number>(60);
+  const intervalRef = useRef<number | null>(null);
+
   const [bpm, setBpm] = useState(60);
   const [isRunning, setIsRunning] = useState(false);
   const [currentBeat, setCurrentBeat] = useState(0);
+  const [elapsedTime, setElapsedTime] = useState(0);
+
   const beatsPerMeasure = 4;
 
   useEffect(() => {
@@ -31,10 +35,22 @@ export default function Metronome() {
     timeoutRef.current = window.setTimeout(tick, interval);
   };
 
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, "0");
+    const secs = (seconds % 60).toString().padStart(2, "0");
+    return `${mins}:${secs}`;
+  };
+
   const start = () => {
     if (!isRunning) {
       setIsRunning(true);
       tick();
+      setElapsedTime(0);
+      intervalRef.current = window.setInterval(() => {
+        setElapsedTime((prev) => prev + 1);
+      }, 1000);
     }
   };
 
@@ -44,6 +60,10 @@ export default function Metronome() {
     if (timeoutRef.current !== null) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
+    }
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
   };
 
@@ -125,6 +145,13 @@ export default function Metronome() {
             <FiStopCircle size={24} />
             Stop
           </button>
+        </div>
+
+        <div className="text-lg font-medium text-gray-700 mt-4 mb-6">
+          Timer:{" "}
+          <span className="font-mono text-xl text-purple-600">
+            {formatTime(elapsedTime)}
+          </span>
         </div>
 
         <div className="mb-4 text-xl font-semibold text-gray-800 flex items-center justify-center gap-6">
