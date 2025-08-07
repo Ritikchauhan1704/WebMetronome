@@ -1,4 +1,4 @@
-# 🎵 Metronome App
+#  Metronome App
 
 ![Metronome Demo](img/image.png)
 
