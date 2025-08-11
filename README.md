@@ -31,7 +31,7 @@ bun dev
 
 ---
 
-## 🚀 Usage
+## Usage
 
 - Adjust the BPM (beats per minute) using the slider or input box.
 - Click the play/pause button to start or stop the metronome.
